@@ -3,7 +3,7 @@ import os
 languages = []
 
 
-class language:
+class Language:
 	def __init__(self, name, extensions, parent_lang="", associated_files=[]):
 		self.name = name
 		self.extensions = extensions
@@ -22,45 +22,45 @@ class language:
 # todo: possibly integrate with a database (linguist) for more accurate results
 # note: the following was mostly generated with a script. I've attempted to clean it up but might have missed something.
 
-language("AngelScript", [".as", ".angelscript"], "C++")
-language(
+Language("AngelScript", [".as", ".angelscript"], "C++")
+Language(
 	"ApacheConf",
 	[".apacheconf", ".vhost"],
 	associated_files=[".htaccess", "apache2.conf", "httpd.conf"],
 )
-language("Apollo Guidance Computer", [".agc"], "assembly_x86")
-language("AppleScript", [".scpt", ".applescript"])
-language("ASP", [".asp", ".aspx", ".asax", ".ascx", ".ashx", ".asmx", ".axd"])
-language("assembly", [".asm", ".a51", ".inc", ".nasm"])
-language("AutoHotkey", [".ahk", ".ahkl"])
-language("autoit", [".au3"])
-language("batchfile", [".bat", ".cmd"])
-language("BGT", [".bgt"])
-language("brainfuck", [".bf", ".b"])
-language("C/C++", [".c", ".cpp", ".c++", ".cc", ".cxx", ".h", ".hpp", ".h++", ".hxx"])
+Language("Apollo Guidance Computer", [".agc"], "assembly_x86")
+Language("AppleScript", [".scpt", ".applescript"])
+Language("ASP", [".asp", ".aspx", ".asax", ".ascx", ".ashx", ".asmx", ".axd"])
+Language("assembly", [".asm", ".a51", ".inc", ".nasm"])
+Language("AutoHotkey", [".ahk", ".ahkl"])
+Language("autoit", [".au3"])
+Language("batchfile", [".bat", ".cmd"])
+Language("BGT", [".bgt"])
+Language("brainfuck", [".bf", ".b"])
+Language("C/C++", [".c", ".cpp", ".c++", ".cc", ".cxx", ".h", ".hpp", ".h++", ".hxx"])
 # thanks Ty
-language("C# (CSharp)", [".cs", ".csx", ".cake"])
-# language("chuck", (".ck"))
-language("CSS", [".css"])
-language("CSV", [".csv"])
-language("cython", [".pyx", ".pxd", ".pyi"])
-language("dockerfile", [".dockerfile"], associated_files=["dockerfile"])
-language("F#", [".fs", ".fsi", ".fsx"])
-language("go", [".go"])
-language("HTML", [".html", ".htm", ".html.hl", ".xht", ".xhtml"])
-language("HTML+Django", [".jinja", ".jinja2", ".mustache", ".njk"])
-language("HTML+ERB", [".erb", ".erb.deface"])
-language("HTML+PHP", [".phtml"])
-language("HTTP", [".http"])
-language(
+Language("C# (CSharp)", [".cs", ".csx", ".cake"])
+# Language("chuck", (".ck"))
+Language("CSS", [".css"])
+Language("CSV", [".csv"])
+Language("cython", [".pyx", ".pxd", ".pyi"])
+Language("dockerfile", [".dockerfile"], associated_files=["dockerfile"])
+Language("F#", [".fs", ".fsi", ".fsx"])
+Language("go", [".go"])
+Language("HTML", [".html", ".htm", ".html.hl", ".xht", ".xhtml"])
+Language("HTML+Django", [".jinja", ".jinja2", ".mustache", ".njk"])
+Language("HTML+ERB", [".erb", ".erb.deface"])
+Language("HTML+PHP", [".phtml"])
+Language("HTTP", [".http"])
+Language(
 	"INI",
 	[".ini", ".cfg", ".lektorproject", ".prefs", ".pro", ".properties"],
 	associated_files=[".editorconfig", ".gitconfig", "buildozer.spec"],
 )
-language("Inno Setup", [".iss"])
-language("java", [".java"])
-language("java server pages", [".jsp"])
-language(
+Language("Inno Setup", [".iss"])
+Language("java", [".java"])
+Language("java server pages", [".jsp"])
+Language(
 	"javascript",
 	[
 		".js",
@@ -83,11 +83,11 @@ language(
 		".xsjslib",
 	],
 )
-language("jaws script", [".jsb", ".jss"])
-language("LOLCode", [".lol"])
-language("Linux Kernel Module", [".mod"])
-language("lua", [".lua", ".wlua"])
-language(
+Language("jaws script", [".jsb", ".jss"])
+Language("LOLCode", [".lol"])
+Language("Linux Kernel Module", [".mod"])
+Language("lua", [".lua", ".wlua"])
+Language(
 	"makefile",
 	[".mak", ".make", ".mk", ".mkfile"],
 	associated_files=[
@@ -106,7 +106,7 @@ language(
 		"mkfile",
 	],
 )
-language(
+Language(
 	"markdown",
 	[
 		".md",
@@ -121,19 +121,19 @@ language(
 	],
 	parent_lang="text",
 )
-language("moo", [".moo"])
-language("Nmap Scripting Engine", [".nse"], parent_lang="lua")
-language("NSIS", [".nsi", ".nsh"])
-language("Nginx", [".nginxconf"], associated_files=["nginx.conf"])
-language("PHP", [".php", ".php3", ".php4", ".php5", ".phps", ".phpt"])
-language(
+Language("moo", [".moo"])
+Language("Nmap Scripting Engine", [".nse"], parent_lang="lua")
+Language("NSIS", [".nsi", ".nsh"])
+Language("Nginx", [".nginxconf"], associated_files=["nginx.conf"])
+Language("PHP", [".php", ".php3", ".php4", ".php5", ".phps", ".phpt"])
+Language(
 	"Perl",
 	[".pl", ".al", ".perl", ".plx", ".pm"],
 	associated_files=["Makefile.PL", "rexfile", "ack", "cpanfile"],
 )
-language("Powershell", [".ps1", ".psd1", ".psm1"])
-language("PureBasic", [".pb", ".pbi"])
-language(
+Language("Powershell", [".ps1", ".psd1", ".psm1"])
+Language("PureBasic", [".pb", ".pbi"])
+Language(
 	"python",
 	[".py", ".pyw", ".py2", ".py3", ".pyi", ".pip"],
 	associated_files=[
@@ -148,8 +148,8 @@ language(
 		"wscript",
 	],
 )
-language("Regular Expression", [".regexp", ".regex"])
-language(
+Language("Regular Expression", [".regexp", ".regex"])
+Language(
 	"ruby",
 	[
 		".rb",
@@ -193,8 +193,8 @@ language(
 		"Thorfile",
 	],
 )
-language("rust", [".rs", ".rs.in"])
-language(
+Language("rust", [".rs", ".rs.in"])
+Language(
 	"shell script",
 	[".sh", ".bash", ".ksh", ".sh.in", ".tmux", ".zsh"],
 	associated_files=[
@@ -210,11 +210,11 @@ language(
 		".zshrc",
 	],
 )
-language("swift", [".swift"])
-language(
+Language("swift", [".swift"])
+Language(
 	"visual basic", [".vb", ".bas", ".cls", ".frm", ".frx", ".vba", ".vbhtml", ".vbs"]
 )
-language("windows registry entry", [".reg"])
+Language("windows registry entry", [".reg"])
 
 
 def detect_lang(filename):
